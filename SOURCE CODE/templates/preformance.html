@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Liver Disease - Login</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="../static/assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../static/assets/css/boxicon.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../static/assets/css/templa.css">
+    <link rel="stylesheet" href="../static/assets/css/custom.css">
+</head>
+
+<body>
+
+<!-- Header -->
+<nav class="navbar navbar-expand-lg navbar-light bg-white shadow">
+    <div class="container d-flex justify-content-between align-items-center">
+        <a class="navbar-brand h1" href="index.html">
+            <i class='bx bx-buildings bx-sm text-dark'></i>
+            <span class="text-dark h4">Liver </span><span class="text-primary h4">disease</span>
+        </a>
+        <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse flex-fill d-lg-flex justify-content-lg-end" id="navbarNav">
+            <ul class="navbar-nav text-center">
+                <li class="nav-item"><a class="nav-link btn-outline-primary rounded-pill px-3" href="{{url_for('index')}}">Home</a></li>
+                <li class="nav-item"><a class="nav-link btn-outline-primary rounded-pill px-3" href="{{url_for('login')}}">Login</a></li>
+                <li class="nav-item"><a class="nav-link btn-outline-primary rounded-pill px-3" href="{{url_for('upload')}}">Upload</a></li>
+                <li class="nav-item"><a class="nav-link btn-outline-primary rounded-pill px-3" href="{{url_for('prediction')}}">Prediction</a></li>
+                <li class="nav-item"><a class="nav-link btn-outline-primary rounded-pill px-3" href="{{url_for('performance')}}">Performance Analysis</a></li>
+                <li class="nav-item"><a class="nav-link btn-outline-primary rounded-pill px-3" href="{{url_for('chart')}}">Chart</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<!-- End Header -->
+
+<!-- Banner -->
+<section class="bg-light py-5">
+    <div class="container text-center">
+        <h1 class="display-4 mb-3">Liver Disease</h1>
+        <h3 class="h5 mb-0">Login</h3>
+    </div>
+</section>
+<!-- End Banner -->
+
+<!-- Content Section -->
+<section class="container py-5">
+    <div class="text-center mb-5">
+        <h2 class="display-5 fw-bold">Recall, F1 and Precision</h2>
+    </div>
+
+    <div class="row justify-content-center mb-5">
+        <div class="col-lg-8">
+            <div class="table-responsive">
+                <table class="table table-bordered table-hover text-center">
+                    <thead class="table-primary">
+                        <tr>
+                            <th>Class</th>
+                            <th>Recall</th>
+                            <th>F1-Score</th>
+                            <th>Precision</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Liver Disease</td>
+                            <td>0.99</td>
+                            <td>0.86</td>
+                            <td>0.92</td>
+                        </tr>
+                        <tr>
+                            <td>No Disease</td>
+                            <td>0.87</td>
+                            <td>0.99</td>
+                            <td>0.93</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <!-- Confusion Matrix -->
+    <div class="text-center mb-5">
+        <h2 class="text-danger fw-bold mb-4">Confusion Matrix</h2>
+        <img src="../static/download.png" alt="Confusion Matrix" class="img-fluid" style="max-width:800px;">
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-secondary text-white pt-4">
+    <div class="container">
+        <div class="row py-4">
+            <div class="col text-center">
+                <p>© 2025 Liver Disease Prediction</p>
+            </div>
+        </div>
+    </div>
+    <div class="w-100 bg-primary py-3">
+        <div class="container text-center">
+            <small>Powered by Liver Disease Prediction Team</small>
+        </div>
+    </div>
+</footer>
+<!-- End Footer -->
+
+<!-- Scripts -->
+<script src="../static/assets/js/bootstrap.bundle.min.js"></script>
+<script src="../static/assets/js/fslightbox.js"></script>
+<script src="../static/assets/js/jquery.min.js"></script>
+<script src="../static/assets/js/isotope.pkgd.js"></script>
+<script src="../static/assets/js/templatemo.js"></script>
+<script src="../static/assets/js/custom.js"></script>
+
+<script>
+    fsLightboxInstances['gallery'].props.loadOnlyCurrentSource = true;
+</script>
+
+</body>
+</html>

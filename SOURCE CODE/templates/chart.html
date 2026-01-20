@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Liver Disease Chart</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="apple-touch-icon" href="../static/assets/img/apple-icon.png">
+    <link rel="shortcut icon" type="image/x-icon" href="../static/assets/img/favicon.ico">
+    <link href="../static/assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../static/assets/css/boxicon.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../static/assets/css/temp.css">
+    <link rel="stylesheet" href="../static/assets/css/custom.css">
+
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load("current", {packages:["corechart"]});
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Class', 'Percentage'],
+          ['Liver Disease', 40],
+          ['No Disease', 60]
+        ]);
+
+        var options = {
+          title: '',
+          is3D: true,
+          width: '100%',
+          height: 500,
+          chartArea: { width: '90%', height: '90%' }
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('piechart_3d'));
+        chart.draw(data, options);
+      }
+    </script>
+</head>
+
+<body>
+
+<!-- Header -->
+<nav id="main_nav" class="navbar navbar-expand-lg navbar-light bg-white shadow">
+    <div class="container d-flex justify-content-between align-items-center">
+        <a class="navbar-brand h1" href="{{url_for('index')}}">
+            <i class='bx bx-buildings bx-sm text-dark'></i>
+            <span class="text-dark h4">Liver</span> <span class="text-primary h4">Disease</span>
+        </a>
+        <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-toggler-success" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="align-self-center collapse navbar-collapse flex-fill d-lg-flex justify-content-lg-between" id="navbar-toggler-success">
+            <div class="flex-fill mx-xl-5 mb-2">
+                <ul class="nav navbar-nav d-flex justify-content-between mx-xl-5 text-center text-dark">
+                    <li class="nav-item">
+                        <a class="nav-link btn-outline-primary rounded-pill px-3" href="{{url_for('index')}}">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link btn-outline-primary rounded-pill px-3" href="{{url_for('login')}}">Login</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link btn-outline-primary rounded-pill px-3" href="{{url_for('upload')}}">Upload</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link btn-outline-primary rounded-pill px-3" href="{{url_for('prediction')}}">Prediction</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link btn-outline-primary rounded-pill px-3" href="{{url_for('performance')}}">Performance Analysis</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link btn-outline-primary rounded-pill px-3" href="{{url_for('chart')}}">Chart</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link btn-outline-primary rounded-pill px-3" href="{{url_for('index')}}">Logout</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</nav>
+<!-- End Header -->
+
+<!-- Start Banner -->
+<div id="work_banner" class="banner-wrapper bg-light w-100 py-5">
+    <div class="banner-vertical-center-work container text-center py-5">
+        <h1 class="banner-heading h2 display-3 pb-5 semi-bold-600">Liver Disease</h1>
+        <h3 class="h4 pb-2 regular-400">Chart</h3>
+    </div>
+</div>
+<!-- End Banner -->
+
+<!-- Start Chart Section -->
+<section class="container py-5">
+    <div class="row justify-content-center">
+        <div class="col-md-10 text-center">
+            <h2 class="h2 mb-4">Prediction Chart</h2>
+            <div id="piechart_3d" style="width: 100%; height: 500px;"></div>
+        </div>
+    </div>
+</section>
+<!-- End Chart Section -->
+
+<!-- Footer -->
+<footer class="bg-secondary pt-4">
+    <div class="w-100 bg-primary py-3">
+        <div class="container text-center">
+            <p class="mb-0 text-white">© 2025 Liver Disease Prediction System</p>
+        </div>
+    </div>
+</footer>
+<!-- End Footer -->
+
+<!-- Scripts -->
+<script src="../static/assets/js/bootstrap.bundle.min.js"></script>
+<script src="../static/assets/js/fslightbox.js"></script>
+<script src="../static/assets/js/jquery.min.js"></script>
+<script src="../static/assets/js/isotope.pkgd.js"></script>
+<script src="../static/assets/js/templatemo.js"></script>
+<script src="../static/assets/js/custom.js"></script>
+
+</body>
+</html>

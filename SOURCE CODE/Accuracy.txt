@@ -1,0 +1,6 @@
+Liver Disease Prediction using Ensemble Technique.
+
+Algorithm / Model Used : Gradient Boosting Classifier + AdaBoost Classifier (Ensemble Technique)
+
+Train Accuracy: 1.00
+Test Accuracy: 0.92

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Liver</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="apple-touch-icon" href="../static/assets/img/apple-icon.png">
+    <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico">
+    <!-- Load Required CSS -->
+    <link href="../static/assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../static/assets/css/boxicon.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../static/assets/css/templa.css">
+    <link rel="stylesheet" href="../static/assets/css/custom.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <nav id="main_nav" class="navbar navbar-expand-lg navbar-light bg-white shadow">
+        <div class="container d-flex justify-content-between align-items-center">
+            <a class="navbar-brand h1" href="index.html">
+                <i class='bx bx-buildings bx-sm text-dark'></i>
+                <span class="text-dark h4">Liver</span> <span class="text-primary h4">disease</span>
+            </a>
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-toggler-success" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse flex-fill d-lg-flex justify-content-lg-between" id="navbar-toggler-success">
+                <ul class="navbar-nav mx-auto text-center">
+                    <li class="nav-item">
+                        <a class="nav-link btn-outline-primary rounded-pill px-3" href="{{url_for('index')}}">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link btn-outline-primary rounded-pill px-3" href="{{url_for('login')}}">Login</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- End Header -->
+
+    <!-- Banner -->
+    <div class="banner-wrapper bg-light">
+        <div id="index_banner" class="banner-vertical-center-index container-fluid pt-5">
+            <!-- Carousel -->
+            <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+                <ol class="carousel-indicators">
+                    <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"></li>
+                    <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"></li>
+                    <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"></li>
+                </ol>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="py-5 row d-flex align-items-center">
+                            <div class="banner-content col-lg-8 col-8 offset-2 m-lg-auto text-left py-5 pb-5">
+                                <h1 class="banner-heading h1 text-secondary display-3 mb-0 pb-5 mx-0 px-0 light-300 typo-space-line">
+                                    Liver disease <strong>prediction</strong> using Ensemble Technique
+                                </h1>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="py-5 row d-flex align-items-center">
+                            <div class="banner-content col-lg-8 col-8 offset-2 m-lg-auto text-left py-5 pb-5">
+                                <h1 class="banner-heading h1 text-secondary display-3 mb-0 pb-3 mx-0 px-0 light-300">
+                                    Liver disease prediction using Ensemble Technique
+                                </h1>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="py-5 row d-flex align-items-center">
+                            <div class="banner-content col-lg-8 col-8 offset-2 m-lg-auto text-left py-5 pb-5">
+                                <h1 class="banner-heading h1 text-secondary display-3 mb-0 pb-3 mx-0 px-0 light-300">
+                                    Liver disease prediction using Ensemble Technique
+                                </h1>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <a class="carousel-control-prev text-decoration-none" href="#carouselExampleIndicators" role="button" data-bs-slide="prev">
+                    <i class='bx bx-chevron-left'></i>
+                    <span class="visually-hidden">Previous</span>
+                </a>
+                <a class="carousel-control-next text-decoration-none" href="#carouselExampleIndicators" role="button" data-bs-slide="next">
+                    <i class='bx bx-chevron-right'></i>
+                    <span class="visually-hidden">Next</span>
+                </a>
+            </div>
+            <!-- End Carousel -->
+        </div>
+    </div>
+    <!-- End Banner -->
+
+    <!-- Footer -->
+    <footer class="bg-secondary pt-4">
+        <div class="container">
+            <div class="row py-4">
+                <div class="w-100 bg-primary py-3">
+                    <div class="container">
+                        <div class="row pt-2">
+                            <div class="col-lg-6 col-sm-12"></div>
+                            <div class="col-lg-6 col-sm-12"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- End Footer -->
+
+    <!-- Bootstrap JS -->
+    <script src="../static/assets/js/bootstrap.bundle.min.js"></script>
+    <!-- Load jQuery for isotope -->
+    <script src="../static/assets/js/jquery.min.js"></script>
+    <script src="../static/assets/js/isotope.pkgd.js"></script>
+    <script>
+        $(window).load(function () {
+            var $projects = $('.projects').isotope({
+                itemSelector: '.project',
+                layoutMode: 'fitRows'
+            });
+            $(".filter-btn").click(function () {
+                var data_filter = $(this).attr("data-filter");
+                $projects.isotope({ filter: data_filter });
+                $(".filter-btn").removeClass("active shadow");
+                $(this).addClass("active shadow");
+                return false;
+            });
+        });
+    </script>
+    <script src="../static/assets/js/templatemo.js"></script>
+    <script src="../static/assets/js/custom.js"></script>
+</body>
+
+</html>

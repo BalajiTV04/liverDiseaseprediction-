@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liver Disease Detection</title>
+
+    <!-- CSS -->
+    <link href="../static/assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../static/assets/css/boxicon.min.css" rel="stylesheet">
+    <link href="../static/assets/css/templatem.css" rel="stylesheet">
+    <link href="../static/assets/css/custom.css" rel="stylesheet">
+    <link rel="shortcut icon" href="assets/img/favicon.ico">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-white shadow">
+    <div class="container">
+        <a class="navbar-brand" href="index.html">
+            <i class='bx bx-buildings bx-sm text-dark'></i>
+            <span class="text-dark h4">Liver </span><span class="text-primary h4">Disease</span>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="{{url_for('index')}}">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{url_for('login')}}">Login</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{url_for('upload')}}">Upload</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<!-- End Navbar -->
+
+<!-- Banner -->
+<section class="bg-light text-center py-5">
+    <div class="container">
+        <h1 class="display-4 mb-4">Liver Disease Detection</h1>
+        <h3 class="mb-2">Login & Upload Dataset</h3>
+    </div>
+</section>
+<!-- End Banner -->
+
+<!-- Upload Form -->
+<section class="py-5">
+    <div class="container text-center">
+        <h2 class="mb-4">Upload Your Dataset</h2>
+        <form action="http://localhost:5000/preview" method="post" enctype="multipart/form-data">
+            <input type="file" name="datasetfile" required class="form-control mb-3" style="max-width: 400px; margin: auto;">
+            <button type="submit" class="btn btn-primary">Upload</button>
+        </form>
+    </div>
+</section>
+<!-- End Upload Form -->
+
+<!-- Footer -->
+<footer class="bg-secondary text-white text-center py-3">
+    <div class="container">
+        <small>&copy; 2025 Liver Disease Detection. All rights reserved.</small>
+    </div>
+</footer>
+<!-- End Footer -->
+
+<!-- Scripts -->
+<script src="../static/assets/js/bootstrap.bundle.min.js"></script>
+<script src="../static/assets/js/jquery.min.js"></script>
+<script src="../static/assets/js/isotope.pkgd.js"></script>
+<script src="../static/assets/js/templatemo.js"></script>
+<script src="../static/assets/js/custom.js"></script>
+
+</body>
+</html>

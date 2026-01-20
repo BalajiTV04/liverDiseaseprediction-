@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Liver</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="apple-touch-icon" href="../static/assets/img/apple-icon.png">
+    <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico">
+    <link href="../static/assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../static/assets/css/boxicon.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../static/assets/css/templat.css">
+    <link rel="stylesheet" href="../static/assets/css/custom.css">
+</head>
+
+<body>
+    <nav id="main_nav" class="navbar navbar-expand-lg navbar-light bg-white shadow">
+        <div class="container d-flex justify-content-between align-items-center">
+            <a class="navbar-brand h1" href="index.html">
+                <i class='bx bx-buildings bx-sm text-dark'></i>
+                <span class="text-dark h4">Liver </span> <span class="text-primary h4">disease</span>
+            </a>
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-toggler-success" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="align-self-center collapse navbar-collapse flex-fill  d-lg-flex justify-content-lg-between" id="navbar-toggler-success">
+                <div class="flex-fill mx-xl-5 mb-2">
+                    <ul class="nav navbar-nav d-flex justify-content-between mx-xl-5 text-center text-dark">
+                        <li class="nav-item">
+                            <a class="nav-link btn-outline-primary rounded-pill px-3" href="{{url_for('index')}}">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link btn-outline-primary rounded-pill px-3" href="{{url_for('login')}}">Login</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link btn-outline-primary rounded-pill px-3" href="{{url_for('upload')}}">Upload</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link btn-outline-primary rounded-pill px-3" href="{{url_for('prediction')}}">Prediction</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link btn-outline-primary rounded-pill px-3" href="{{url_for('performance')}}">Performance_Analysis</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div id="work_banner" class="banner-wrapper bg-light w-100 py-5">
+        <div class="banner-vertical-center-work container text-light d-flex justify-content-center align-items-center py-5 p-0">
+            <div class="banner-content col-lg-8 col-12 m-lg-auto text-center">
+                <h1 class="banner-heading h2 display-3 pb-5 semi-bold-600 typo-space-line-center">Liver disease</h1>
+                <h3 class="h4 pb-2 regular-400">Prediction</h3>
+                <p class="banner-body pb-2 light-300">
+                    <a class="text-white" href="http://freepik.com/" target="_blank"> </a>.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <section class="container py-5">
+        <div class="banner-content col-lg-8 col-12 m-lg-auto text-center">
+            <h1 class="banner-heading h2 display-3 pb-5 semi-bold-600 typo-space-line-center">Prediction</h1>
+        </div>
+        <div class="col-md-12 col-sm-12 col-xs-12" style="margin-left:50px;">
+            <center><form action="{{ url_for('predict')}}" method="POST"> </center>
+
+                <div class="span5">
+                    <div class="control-group">
+                        <center><label class="control-label" for="inputMessage"><b></b></label></br></center>
+                        </br>
+
+                        <div class="controls">
+                            <center> <b> Age: </b> <input type="text" name="age" placeholder="Age" required="required" width="300" style="width: 300px"/></center>
+                        </div>
+                        </br>
+
+                        <div class="controls">
+                            <center><b>Gender:</b> <select type="text" name="Gender" required="required" placeholder="Gender" width="300" style="width: 300px"></center>
+                            <option value="1">Female</option>
+                            <option value="2">Male</option>
+                        </select> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        </div>
+
+                        </br>
+                        <div class="controls">
+                            <center> <b> Total_Bilirubin: </b> <input type="text" name="Total_Bilirubin" placeholder="Total_Bilirubin" required="required" width="300" style="width: 300px"/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</center>
+                        </div>
+
+                        </br>
+                        <div class="controls">
+                            <center> <b> Direct_Bilirubin: </b> <input type="text" name="Direct_Bilirubin" placeholder="Direct_Bilirubin" required="required" width="300" style="width: 300px"/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</center>
+                        </div>
+
+                        </br>
+                        <div class="controls">
+                            <center> <b> Alkaline_Phosphotase: </b> <input type="text" name="Alkaline_Phosphotase" placeholder="Alkaline_Phosphotase" required="required" width="300" style="width: 300px"/>&nbsp;&nbsp;&nbsp&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</center>
+                        </div>
+
+                        </br>
+                        <div class="controls">
+                            <center> <b> Alamine_Aminotransferase: </b> <input type="text" name="Alamine_Aminotransferase" placeholder="Alamine_Aminotransferase" required="required" width="300" style="width: 300px"/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</center>
+                        </div>
+
+                        </br>
+                        <div class="controls">
+                            <center> <b> Aspartate_Aminotransferase: </b> <input type="text" name="Aspartate_Aminotransferase" placeholder="Aspartate_Aminotransferase" required="required" width="300" style="width: 300px"/>&nbsp;&nbsp;&nbsp&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</center>
+                        </div>
+
+                        </br>
+                        <div class="controls">
+                            <center> <b> Total_Protiens: </b> <input type="text" name="Total_Protiens" placeholder="Total_Protiens" required="required" width="300" style="width: 300px"/>&nbsp;&nbsp;&nbsp &nbsp;&nbsp;&nbsp&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</center>
+                        </div>
+
+                        </br>
+                        <div class="controls">
+                            <center> <b> Albumin: </b> <input type="text" name="Albumin" placeholder="Albumin" required="required" width="300" style="width: 300px"/>  &nbsp;&nbsp;&nbsp&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</center>
+                        </div>
+
+                        </br>
+                        <div class="controls">
+                            <center> <b> Albumin_and_Globulin_Ratio: </b> <input type="text" name="Albumin_and_Globulin_Ratio" placeholder="Albumin_and_Globulin_Ratio" required="required" width="300" style="width: 300px"/>&nbsp;&nbsp;&nbsp&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</center>
+                        </div>
+                        </br>
+                        <center>  <button type="submit" class="btn btn-primary">Predict </button></center>
+                    </div>
+                </div>
+            </form>
+
+            <center><h1> Prediction is : {{ prediction_text }} </h1></center>
+        </div>
+    </section>
+
+    <footer class="bg-secondary pt-4">
+        <div class="container">
+            <div class="row py-4">
+                <div class="w-100 bg-primary py-3">
+                    <div class="container">
+                        <div class="row pt-2">
+                            <div class="col-lg-6 col-sm-12"></div>
+                            <div class="col-lg-6 col-sm-12"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../static/assets/js/bootstrap.bundle.min.js"></script>
+    <script src="../static/assets/js/fslightbox.js"></script>
+    <script>
+        fsLightboxInstances['gallery'].props.loadOnlyCurrentSource = true;
+    </script>
+    <script src="../static/assets/js/jquery.min.js"></script>
+    <script src="../static/assets/js/isotope.pkgd.js"></script>
+    <script>
+        $(window).load(function() {
+            var $projects = $('.projects').isotope({
+                itemSelector: '.project',
+                layoutMode: 'fitRows'
+            });
+            $(".filter-btn").click(function() {
+                var data_filter = $(this).attr("data-filter");
+                $projects.isotope({
+                    filter: data_filter
+                });
+                $(".filter-btn").removeClass("active");
+                $(".filter-btn").removeClass("shadow");
+                $(this).addClass("active");
+                $(this).addClass("shadow");
+                return false;
+           
+
+

@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Liver</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="apple-touch-icon" href="../static/assets/img/apple-icon.png">
+    <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico">
+    <!-- Load Required CSS -->
+    <link href="../static/assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../static/assets/css/boxicon.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../static/assets/css/templa.css">
+    <link rel="stylesheet" href="../static/assets/css/custom.css">
+    <style>
+        .table-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            margin-top: 50px; /* adjust as needed */
+        }
+        table {
+            border-collapse: collapse;
+            width: auto;
+            margin: 20px auto;
+            font-size: 16px;
+        }
+        th, td {
+            border: 3px solid #444;
+            padding: 8px 12px;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <nav id="main_nav" class="navbar navbar-expand-lg navbar-light bg-white shadow">
+        <div class="container d-flex justify-content-between align-items-center">
+            <a class="navbar-brand h1" href="index.html">
+                <i class='bx bx-buildings bx-sm text-dark'></i>
+                <span class="text-dark h4">Liver </span><span class="text-primary h4">disease</span>
+            </a>
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbar-toggler-success" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbar-toggler-success">
+                <ul class="navbar-nav mx-auto text-center">
+                    <li class="nav-item">
+                        <a class="nav-link btn-outline-primary rounded-pill px-3" href="{{url_for('index')}}">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link btn-outline-primary rounded-pill px-3" href="{{url_for('login')}}">Login</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link btn-outline-primary rounded-pill px-3" href="{{url_for('upload')}}">Upload</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link btn-outline-primary rounded-pill px-3" href="{{url_for('prediction')}}">Prediction</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link btn-outline-primary rounded-pill px-3" href="{{url_for('performance')}}">Performance Analysis</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link btn-outline-primary rounded-pill px-3" href="{{url_for('chart')}}">Chart</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- End Header -->
+
+    <!-- Banner -->
+    <div id="work_banner" class="banner-wrapper bg-light w-100 py-5">
+        <div class="container text-center py-5">
+            <h1 class="h2 display-3 semi-bold-600">Liver Disease</h1>
+            <h3 class="h4 regular-400">Performance Analysis</h3>
+        </div>
+    </div>
+    <!-- End Banner -->
+
+    <!-- Main Content -->
+    <section class="container py-5">
+
+        <div class="text-center mb-5">
+            <h2 class="h2 display-5 semi-bold-600">Performance Metrics</h2>
+        </div>
+
+        <div class="text-center mb-4">
+            <h3 style="color:green;">Accuracy,Precision,Recall and F1 Score</h3>
+        </div>
+
+        <div class="row justify-content-center mb-5">
+            <div class="col-md-6 text-center">
+                <div class="table-container">
+                    <table>
+                      <thead>
+                        <tr>
+                          <th><h5>Class</h5></th>
+                          <th><h5>Precision</h5></th>
+                          <th><h5>Recall</h5></th>
+                          <th><h5>F1 Score</h5></th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td style="background-color: #f2f2f2"><strong><h5>Positive(1)</h5></strong></td>
+                          <td><strong>0.99</strong></td>
+                          <td><strong>0.86</strong></td>
+                          <td><strong>0.92</strong></td>
+                        </tr>
+                        <tr>
+                          <td style="background-color: #f2f2f2"><strong><h5>Negative(2)</h5></strong></td>
+                          <td><strong>0.87</strong></td>
+                          <td><strong>0.99</strong></td>
+                          <td><strong>0.93</strong></td>
+                        </tr>
+                        <tr style="border: 3px solid #444;padding: 8px 12px;">
+                            <td colspan="4"><strong><h5>Accuracy: 0.92</h5></strong></td>
+                        </tr>
+                      </tbody>
+                    </table>
+            </div>
+        </div>
+
+        <div class="text-center mb-4">
+            <h3 style="color:red;">Confusion Matrix</h3>
+        </div>
+
+        <div class="text-center">
+            <img src="../static/download.png" alt="Confusion Matrix" style="width:800px; height:500px;">
+        </div>
+
+    </section>
+    <!-- End Main Content -->
+
+    <!-- Footer -->
+    <footer class="bg-secondary pt-4">
+        <div class="container">
+            <div class="row py-4">
+                <div class="col-lg-6 col-sm-12"></div>
+                <div class="col-lg-6 col-sm-12"></div>
+            </div>
+        </div>
+        <div class="w-100 bg-primary py-3">
+            <div class="container text-center">
+                <small class="text-white">© 2025 Liver Disease Project</small>
+            </div>
+        </div>
+    </footer>
+    <!-- End Footer -->
+
+    <!-- JS Files -->
+    <script src="../static/assets/js/bootstrap.bundle.min.js"></script>
+    <script src="../static/assets/js/fslightbox.js"></script>
+    <script src="../static/assets/js/jquery.min.js"></script>
+    <script src="../static/assets/js/isotope.pkgd.js"></script>
+    <script src="../static/assets/js/templatemo.js"></script>
+    <script src="../static/assets/js/custom.js"></script>
+
+    <script>
+        fsLightboxInstances['gallery'].props.loadOnlyCurrentSource = true;
+        $(window).on('load', function () {
+            var $projects = $('.projects').isotope({
+                itemSelector: '.project',
+                layoutMode: 'fitRows'
+            });
+            $(".filter-btn").click(function () {
+                var data_filter = $(this).attr("data-filter");
+                $projects.isotope({ filter: data_filter });
+                $(".filter-btn").removeClass("active shadow");
+                $(this).addClass("active shadow");
+                return false;
+            });
+        });
+    </script>
+
+</body>
+
+</html>
